@@ -1,0 +1,5 @@
+{
+  "alphabet": "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ,.1234567890",
+  "input_text": "input.txt",
+  "output_text": "output.txt"
+}
