@@ -1,0 +1,7 @@
+{
+    "frequency_ru": "frequency_ru.json",
+    "frequency_cod4": "frequency_cod4.json",
+    "encrypted_text": "cod4.txt",
+    "decrypted_text": "decrypted.txt",
+    "key_2": "key_2.json"
+}
