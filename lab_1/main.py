@@ -75,7 +75,8 @@ def encrypt(text: str, alphabet: str, offset: int)->str:
 
 def frequency_analysis(text: str, frequency_ru: dict)->tuple:
     """
-
+    Provides frequency analysis and create key to encrypted text
+    Return frequency analysis of encrypted text and key to it
     """
     text = text.upper()
     char_text = {}
@@ -98,7 +99,7 @@ def frequency_analysis(text: str, frequency_ru: dict)->tuple:
 
 def decrypt(text: str, key: dict)->str:
     """
-    Decrypting
+    Decrypting text by key
     """
     text = text.upper()
     decrypted_text = ""
@@ -112,7 +113,7 @@ def decrypt(text: str, key: dict)->str:
 
 def main():
     """
-
+    Provides operates to solve Task 1 and Task 2
     """
     args = parse()
     config = open_json_file(args.config_1)
@@ -122,10 +123,10 @@ def main():
     save_file(config["output_text"], output)
     config = open_json_file(args.config_2)
     text = open_file(config["encrypted_text"])
-    #frequency_ru = open_json_file(args.frequency_ru)
-    #frequency_text, key_2 = frequency_analysis(text, frequency_ru)
-    #save_json_file(config["frequency_cod4"], frequency_text)
-    #save_json_file(config["key_2"], key_2)
+    frequency_ru = open_json_file(args.frequency_ru)
+    frequency_text, key_2 = frequency_analysis(text, frequency_ru)
+    save_json_file(config["frequency_cod4"], frequency_text)
+    save_json_file(config["key_2"], key_2)
     key_2 = open_json_file(config["key_2"])
     decrypted_text = decrypt(text, key_2)
     save_file(config["decrypted_text"], decrypted_text)
