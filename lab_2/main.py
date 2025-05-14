@@ -90,7 +90,7 @@ def longest_sequence(sequence: list, block: int, pi: list) -> float:
                 block_max[1] += 1
             case 3:
                 block_max[2] += 1
-            case 4:
+            case _:
                 block_max[3] += 1
     x = 0
     for i in range(4):
