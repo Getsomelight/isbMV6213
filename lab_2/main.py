@@ -83,14 +83,15 @@ def longest_sequence(sequence: list, block: int, pi: list) -> float:
                 i += 1
             i += 1
             max_ones = cur if cur > max_ones else max_ones
-        if max_ones <= 1:
-            block_max[0] += 1
-        if max_ones == 2:
-            block_max[1] += 1
-        if max_ones == 3:
-            block_max[2] += 1
-        if max_ones >= 4:
-            block_max[3] += 1
+        match max_ones:
+            case 0 | 1:
+                block_max[0] += 1
+            case 2:
+                block_max[1] += 1
+            case 3:
+                block_max[2] += 1
+            case 4:
+                block_max[3] += 1
     x = 0
     for i in range(4):
         x += (block_max[i] - 16 * pi[i]) ** 2 / (16 * pi[i])
