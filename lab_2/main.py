@@ -42,6 +42,9 @@ def save_file(path: str, output: str) -> None:
 
 
 def frequency_bitwise(sequence: list) -> float:
+    """
+    A NIST test for frequency bitwise of ones
+    """
     s = 0
     for i in sequence:
         s += 1 if i == 1 else -1
@@ -50,6 +53,9 @@ def frequency_bitwise(sequence: list) -> float:
 
 
 def identical_consecutive_bits(sequence: list) -> float:
+    """
+    A NIST test for identical consecutive bits
+    """
     ratio = sum(sequence) / len(sequence)
     if not abs(ratio - 0.5) < 2 / math.sqrt(len(sequence)):
         return 0
@@ -62,6 +68,9 @@ def identical_consecutive_bits(sequence: list) -> float:
 
 
 def longest_sequence(sequence: list, block: int, pi: list) -> float:
+    """
+    A NIST test for longest sequences in blocks of sequence
+    """
     block_max = [0, 0, 0, 0]
     for block_s in range(0, len(sequence), block):
         max_ones = 0
@@ -90,6 +99,9 @@ def longest_sequence(sequence: list, block: int, pi: list) -> float:
 
 
 def main():
+    """
+    Provides operates to make a NIST test on random sequence of bits
+    """
     args = parse()
     config = open_json_file(args.config)
     java_sequence = list(int(x) for x in config["Java"])
