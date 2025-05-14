@@ -1,0 +1,9 @@
+Java
+Frequency bitwise test: 0.37675911781158217
+Identical consecutive bits test: 0.27196680035485465
+Longest sequence test: 0.9764960664133359
+
+C++
+Frequency bitwise test: 0.7236736098317631
+Identical consecutive bits test: 0.37951601403552154
+Longest sequence test: 5.224877827489013e-14
