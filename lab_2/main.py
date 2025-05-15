@@ -127,17 +127,15 @@ def main():
         + str(longest_sequence(cpp_sequence, block, pi))
     )
     coin = (
-            "Coin\nFrequency bitwise test: "
-            + str(frequency_bitwise(coin_sequence))
-            + "\nIdentical consecutive bits test: "
-            + str(identical_consecutive_bits(coin_sequence))
-            + "\nLongest sequence test: "
-            + str(longest_sequence(coin_sequence, block, pi))
+        "Coin\nFrequency bitwise test: "
+        + str(frequency_bitwise(coin_sequence))
+        + "\nIdentical consecutive bits test: "
+        + str(identical_consecutive_bits(coin_sequence))
+        + "\nLongest sequence test: "
+        + str(longest_sequence(coin_sequence, block, pi))
     )
     output = java + "\n\n" + cpp + "\n\n" + coin
-    save_file(
-        config["output"], output
-    )
+    save_file(config["output"], output)
 
 
 if __name__ == "__main__":
