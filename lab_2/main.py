@@ -107,6 +107,7 @@ def main():
     config = open_json_file(args.config)
     java_sequence = list(int(x) for x in config["Java"])
     cpp_sequence = list(int(x) for x in config["C++"])
+    coin_sequence = list(int(x) for x in config["Coin"])
     pi = config["pi"]
     block = config["block"]
     java = (
@@ -125,7 +126,15 @@ def main():
         + "\nLongest sequence test: "
         + str(longest_sequence(cpp_sequence, block, pi))
     )
-    output = java + "\n\n" + cpp
+    coin = (
+            "Coin\nFrequency bitwise test: "
+            + str(frequency_bitwise(coin_sequence))
+            + "\nIdentical consecutive bits test: "
+            + str(identical_consecutive_bits(coin_sequence))
+            + "\nLongest sequence test: "
+            + str(longest_sequence(coin_sequence, block, pi))
+    )
+    output = java + "\n\n" + cpp + "\n\n" + coin
     save_file(
         config["output"], output
     )
