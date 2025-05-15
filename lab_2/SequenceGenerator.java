@@ -4,9 +4,13 @@ import java.util.Random;
 A class that demonstrates generation of random bytes and their binary representation.
 This program generates 16 random bytes and converts them into a concatenated binary string.
 */
-class Main{
+class Main {
+    /*
+    The main method that executes the program.
+    param args Command-line arguments (not used in this program)
+    */
     public static void main(String[] args) {
-        Random r= new Random();
+        Random r = new Random();
         byte[] bytes = new byte[16];
         r.nextBytes(bytes);
         StringBuilder binaryString = new StringBuilder();

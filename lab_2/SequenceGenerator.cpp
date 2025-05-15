@@ -6,6 +6,9 @@ using namespace std;
 
 /*
 Generates a random binary sequence of specified size
+
+param: size - The length of the binary sequence to generate
+return: vector<bool> - A vector containing the generated random binary sequence
  */
 vector<bool> SequenceGenerate(const size_t& size)
 {
@@ -19,6 +22,8 @@ vector<bool> SequenceGenerate(const size_t& size)
 
 /*
 Main program entry point
+
+return: int - Program exit status (0 for success)
  */
 int main()
 {
@@ -26,4 +31,5 @@ int main()
 	binary_sequence = SequenceGenerate(128);
 	for (bool bit : binary_sequence)
 		cout << bit;
+	return 0;
 }
