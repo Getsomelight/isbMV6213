@@ -1,14 +1,14 @@
 Java
 Frequency bitwise test: 0.37675911781158217
 Identical consecutive bits test: 0.27196680035485465
-Longest sequence test: 0.9764960664133359
+Longest sequence test: 0.879232915768779
 
 C++
 Frequency bitwise test: 0.7236736098317631
 Identical consecutive bits test: 0.37951601403552154
-Longest sequence test: 5.224877827489013e-14
+Longest sequence test: 0.41720021512626504
 
 Coin
 Frequency bitwise test: 0.8596837951986662
 Identical consecutive bits test: 0.7919215654507887
-Longest sequence test: 0.9257914756620502
+Longest sequence test: 0.8429378855917242
