@@ -43,7 +43,7 @@ def save_file(path: str, output: str) -> None:
 
 def frequency_bitwise(sequence: list) -> float:
     """
-    A NIST test for frequency bitwise of ones
+    An NIST test for frequency bitwise of ones
     """
     s = 0
     for i in sequence:
@@ -54,7 +54,7 @@ def frequency_bitwise(sequence: list) -> float:
 
 def identical_consecutive_bits(sequence: list) -> float:
     """
-    A NIST test for identical consecutive bits
+    An NIST test for identical consecutive bits
     """
     ratio = sum(sequence) / len(sequence)
     if not abs(ratio - 0.5) < 2 / math.sqrt(len(sequence)):
@@ -69,7 +69,7 @@ def identical_consecutive_bits(sequence: list) -> float:
 
 def longest_sequence(sequence: list, block: int, pi: list) -> float:
     """
-    A NIST test for longest sequences in blocks of sequence
+    An NIST test for longest sequences in blocks of sequence
     """
     block_max = [0, 0, 0, 0]
     for block_s in range(0, len(sequence), block):
@@ -95,13 +95,13 @@ def longest_sequence(sequence: list, block: int, pi: list) -> float:
     x = 0
     for i in range(4):
         x += (block_max[i] - 16 * pi[i]) ** 2 / (16 * pi[i])
-    x = x**2
+    x = x ** (1 / 2)
     return gammaincc(1.5, x / 2)
 
 
 def main():
     """
-    Provides operates to make a NIST test on random sequence of bits
+    Provides operates to make an NIST test on random sequence of bits
     """
     args = parse()
     config = open_json_file(args.config)
